@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: API Escolar - Flask MVC
+  version: 1.0.0
+paths:
+  /api/professores:
+    get:
+      summary: Lista todos os professores
+      responses:
+        '200':
+          description: Lista de professores
+    post:
+      summary: Adiciona um novo professor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                disciplina:
+                  type: string
+      responses:
+        '201':
+          description: Professor criado

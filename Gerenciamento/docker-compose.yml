@@ -1,7 +1,8 @@
-version: '3.8'
+version: "3.8"
 services:
-  gerenciamento:
+  flask_api:
     build: .
-    container_name: svc_gerenciamento
     ports:
       - "5000:5000"
+    volumes:
+      - .:/app
